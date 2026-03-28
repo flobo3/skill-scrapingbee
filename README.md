@@ -14,7 +14,7 @@ A Python script to fetch and render JavaScript-heavy or bot-protected websites u
 
 - Python 3.10+
 - `uv` (recommended) or `pip` for dependency management
-- A ScrapingBee API key
+- A ScrapingBee API key (you can get one at [dashboard.scrapingbee.com/dashboard](https://dashboard.scrapingbee.com/dashboard))
 
 ## Installation
 
