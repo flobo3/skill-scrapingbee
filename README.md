@@ -1,10 +1,9 @@
-# ScrapingBee Fetch OSS
+# ScrapingBee Fetch
 
-A Python script to fetch and render JavaScript-heavy or bot-protected websites using the [ScrapingBee API](https://www.scrapingbee.com/). It extracts the main content and returns it as clean Markdown, making it perfect for LLM reading and data extraction.
+A Python script to fetch and render JavaScript-heavy websites using the [ScrapingBee API](https://www.scrapingbee.com/). It extracts the main content and returns it as clean Markdown, making it perfect for LLM reading and data extraction.
 
 ## Features
 
-- Bypasses bot protection (Cloudflare, DataDome, etc.)
 - Automatically renders JavaScript
 - Extracts relevant text content and title
 - Fixes common encoding issues
@@ -21,8 +20,8 @@ A Python script to fetch and render JavaScript-heavy or bot-protected websites u
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/scrapingbee-fetch-oss.git
-cd scrapingbee-fetch-oss
+git clone https://github.com/flobo3/skill-scrapingbee.git
+cd skill-scrapingbee
 ```
 
 Set your ScrapingBee API key as an environment variable:
@@ -51,7 +50,7 @@ uv run fetch.py --url "https://example.com"
 - `--country-code <code>`: Use a proxy from a specific country (e.g., `us`, `uk`, `ru`).
 - `--wait <milliseconds>`: Wait time in milliseconds before extracting content (default: 3000).
 - `--no-block-ads`: Disable ad blocking (ads are blocked by default to save bandwidth and speed up rendering).
-- `--premium-proxy`: Use a premium proxy (useful for highly protected websites).
+- `--premium-proxy`: Use a premium proxy (useful for complex websites).
 
 ### Examples
 
@@ -60,7 +59,7 @@ Fetch a website using a US proxy and wait 5 seconds:
 uv run fetch.py --url "https://example.com" --country-code us --wait 5000
 ```
 
-Fetch a highly protected website using a premium proxy:
+Fetch a complex website using a premium proxy:
 ```bash
 uv run fetch.py --url "https://example.com" --premium-proxy
 ```
