@@ -1,5 +1,5 @@
 ---
-name: scrapingbee-fetch-oss
+name: scrapingbee-fetch
 description: Fetch and render JavaScript-heavy or bot-protected websites using ScrapingBee API. Returns clean Markdown.
 ---
 
