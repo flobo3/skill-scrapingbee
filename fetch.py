@@ -67,16 +67,16 @@ def fetch_url(url, render_js=True, country_code=None, wait=3000, block_ads=True,
         title = data.get("title", "No title found")
         text = data.get("text", "No text found")
         
-        # Fix encoding issues from ScrapingBee JSON response
+        # Fix double-encoded text from ScrapingBee (UTF-8 read as Windows-1251)
         if isinstance(title, str):
             try:
                 title = title.encode('windows-1251').decode('utf-8')
-            except:
+            except (UnicodeDecodeError, UnicodeEncodeError):
                 pass
         if isinstance(text, str):
             try:
                 text = text.encode('windows-1251').decode('utf-8')
-            except:
+            except (UnicodeDecodeError, UnicodeEncodeError):
                 pass
                 
         print(f"# {title}\n")
